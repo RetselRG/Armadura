@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}"
+             x:Class="Armadura.Views.LoginPage"
+             Title="Obten tu clave">
+    <ContentPage.Content >
+        <ScrollView BackgroundColor="White">
+        <StackLayout BackgroundColor="White"
+                      WidthRequest="200"
+                     HorizontalOptions="FillAndExpand"
+                     BindingContext="{Binding Login}"
+                     Margin="20"
+                     >
+            
+            <Image Source="logo"></Image>
+            <Label 
+                   Text="Correo"
+                    FontAttributes="Bold"
+                FontSize="Large">
+            </Label>
+            <Entry 
+                    Keyboard="Email" 
+                   Placeholder="Ingresa tu correo"
+                    Text="{Binding Email, Mode=TwoWay}">
+            </Entry>
+            <Label 
+                   Text="Contraseña"
+                FontAttributes="Bold"
+                FontSize="Large"
+               >
+            </Label>
+            <Entry 
+                    IsPassword="True"
+                    Placeholder="Ingresa tu contraseña"
+                    Text="{Binding Password,Mode=TwoWay}">
+            </Entry>
+            <Label
+                    HorizontalOptions="Center"
+                    Text="Olvidaste tu contraseña"
+                    TextColor="Blue">
+            </Label>
+
+
+            <Button Text="Obtener Clave"
+                     BackgroundColor="Navy"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    IsEnabled="{Binding IsEnabled,Mode=TwoWay}"
+                    Command="{Binding LoginCommad}"
+                    Margin="50"
+                    
+                    ></Button>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
