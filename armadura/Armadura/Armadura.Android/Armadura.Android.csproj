@@ -91,7 +91,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Clave.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Armadura\Armadura.csproj">
       <Project>{F6760AA3-A2C8-4D3B-94A6-1687E88A6549}</Project>

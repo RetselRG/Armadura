@@ -5,6 +5,7 @@ namespace Armadura.ViewModels
     using GalaSoft.MvvmLight.Command;
     using System.Windows.Input;
     using Xamarin.Forms;
+    using Views;
     public class LoginViewModel : BaseViewModel
     {
         #region Atributos
@@ -90,8 +91,8 @@ namespace Armadura.ViewModels
             this.Email = string.Empty;
             this.Password = string.Empty;
 
-            //MainViewModel.GetInstance(). = new LandViewModel();
-            //await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
+            MainViewModel.GetInstance().Datos = new DatosViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new DatosPage());
             //await Application.Current.MainPage.DisplayAlert("Ok", "Excelente", "Aceptar");
         }
         #endregion

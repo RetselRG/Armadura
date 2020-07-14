@@ -1,5 +1,7 @@
 ﻿
 
+using Armadura.Models;
+
 namespace Armadura.ViewModels
 {
    
@@ -12,6 +14,11 @@ namespace Armadura.ViewModels
             get;
             set;
         }
+        public DatosViewModel Datos 
+        { 
+            get;
+            set;
+        }
         #endregion
         #region Constructor
         public MainViewModel()
@@ -19,6 +26,7 @@ namespace Armadura.ViewModels
             instance = this;
             this.Login = new LoginViewModel();
         }
+        
         public static MainViewModel GetInstance()
         {
             if (instance == null)

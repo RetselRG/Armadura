@@ -16,7 +16,8 @@
                      Margin="20"
                      >
             
-            <Image Source="logo"></Image>
+            <Image Source="logo"
+                   ></Image>
             <Label 
                    Text="Correo"
                     FontAttributes="Bold"
