@@ -1,0 +1,42 @@
+﻿@model Armadura.Domain.Clave
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Clave</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contrasena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contrasena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaExpira)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaExpira)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdClave }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
